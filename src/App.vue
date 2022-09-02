@@ -1,7 +1,16 @@
 <template>
   <ion-app>
     <ion-split-pane content-id="main-content">
-      <ion-menu content-id="main-content" type="overlay">
+      <ion-menu class="hide-scrollbar" content-id="main-content" type="overlay">
+        <ion-header>
+          <ion-toolbar color="danger">
+            <ion-title>End Menu</ion-title>
+            <ion-title>End Menu</ion-title>
+            <ion-title>End Menu</ion-title>
+            <ion-title>End Menu</ion-title>
+          </ion-toolbar>
+        </ion-header>
+
         <ion-content>
           <ion-list id="inbox-list">
             <ion-list-header>Inbox</ion-list-header>
@@ -49,6 +58,7 @@
           </ion-list>
         </ion-content>
       </ion-menu>
+
       <ion-router-outlet id="main-content"></ion-router-outlet>
     </ion-split-pane>
   </ion-app>
@@ -299,5 +309,46 @@ ion-note {
 
 ion-item.selected {
   --color: var(--ion-color-primary);
+}
+
+ion-menu {
+  overflow-x: hidden;
+}
+
+ion-menu {
+  --offset-bottom: auto !important;
+  --overflow: auto;
+  --background: #f7f7fa;
+  overflow: auto;
+}
+ion-menu::part(background) {
+  bottom: 0;
+}
+ion-menu::-webkit-scrollbar {
+  overflow: hidden;
+}
+
+ion-menu::-webkit-scrollbar {
+  display: none;
+  scrollbar-width: none;
+}
+/* width */
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  border-radius: 3px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: orange;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: orange;
 }
 </style>
